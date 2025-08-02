@@ -1,88 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Tools by Pawan Rajput</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; }
-        header { background-color: #1e293b; padding: 20px; text-align: center; }
-        header h1 { margin: 0; color: #38bdf8; }
-        nav { background-color: #334155; display: flex; flex-wrap: wrap; justify-content: center; }
-        nav button { background: none; border: none; color: #f8fafc; padding: 15px; cursor: pointer; font-size: 16px; }
-        nav button:hover { background-color: #1e40af; }
-        section { display: none; padding: 20px; }
-        section.active { display: block; }
-        a { color: #38bdf8; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        h2 { border-bottom: 2px solid #64748b; padding-bottom: 5px; }
-        ul { list-style: none; padding-left: 0; }
-        li::before { content: "\f054"; font-family: "Font Awesome 6 Free"; font-weight: 900; padding-right: 10px; color: #38bdf8; }
-        .search-container { text-align: center; margin: 20px; }
-        input[type='text'] { padding: 10px; width: 60%; font-size: 16px; border-radius: 5px; border: none; }
-        .lang-toggle { position: absolute; top: 10px; right: 20px; }
-        .lang-toggle button { margin-left: 5px; padding: 5px 10px; }
-        .tip-box { background: #1e293b; padding: 10px; margin: 10px 0; border-left: 5px solid #38bdf8; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Tools by Pawan Rajput</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; }
+    header { background-color: #1e293b; padding: 20px; text-align: center; }
+    header h1 { margin: 0; color: #38bdf8; }
+    nav { background-color: #334155; display: flex; flex-wrap: wrap; justify-content: center; }
+    nav button { background: none; border: none; color: #f8fafc; padding: 15px; cursor: pointer; font-size: 16px; }
+    nav button:hover { background-color: #1e40af; }
+    section { display: none; padding: 20px; }
+    section.active { display: block; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h2 { border-bottom: 2px solid #64748b; padding-bottom: 5px; }
+    ul { list-style: none; padding-left: 0; }
+    li::before { content: "\f054"; font-family: "Font Awesome 6 Free"; font-weight: 900; padding-right: 10px; color: #38bdf8; }
+    .search-container { text-align: center; margin: 20px; }
+    input[type='text'] { padding: 10px; width: 60%; font-size: 16px; border-radius: 5px; border: none; }
+    .lang-toggle { position: absolute; top: 10px; right: 20px; }
+    .lang-toggle button { margin-left: 5px; padding: 5px 10px; }
+    .tip-box { background: #1e293b; padding: 10px; margin: 10px 0; border-left: 5px solid #38bdf8; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1><i class="fas fa-shield-alt"></i> Cybersecurity Tools Portal — By Pawan Rajput</h1>
-        <div class="lang-toggle">
-            <button onclick="setLang('en')">EN</button>
-            <button onclick="setLang('hi')">हिंदी</button>
-        </div>
-    </header>
+<header>
+  <h1><i class="fas fa-shield-alt"></i> Cybersecurity Tools Portal — By Pawan Rajput</h1>
+  <div class="lang-toggle">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('hi')">हिंदी</button>
+  </div>
+</header>
 
-    <div class="search-container">
-        <input type="text" id="searchBox" onkeyup="filterTools()" placeholder="🔍 Search tools...">
-    </div>
+<div class="search-container">
+  <input type="text" id="searchBox" onkeyup="filterTools()" placeholder="🔍 Search tools...">
+</div>
 
-    <nav>
-        <button onclick="showTab('tools')"><i class="fas fa-toolbox"></i> All Tools</button>
-        <button onclick="showTab('ai')"><i class="fas fa-robot"></i> AI Tips</button>
-    </nav>
+<nav>
+  <button onclick="showTab('tools')"><i class="fas fa-toolbox"></i> All Tools</button>
+  <button onclick="showTab('ai')"><i class="fas fa-robot"></i> AI Tips</button>
+</nav>
 
-    <section id="tools" class="active">
-        <h2>🧰 All Tools (Filtered View)</h2>
-        <ul id="toolList">
-            <li><a href="https://virustotal.com" target="_blank">VirusTotal - File/URL reputation</a></li>
-            <li><a href="https://urlscan.io" target="_blank">URLScan - URL analysis</a></li>
-            <li><a href="https://any.run" target="_blank">Any.Run - Malware sandbox</a></li>
-            <li><a href="https://ghidra-sre.org" target="_blank">Ghidra - Reverse Engineering</a></li>
-            <li><a href="https://tryhackme.com" target="_blank">TryHackMe - Hands-on labs</a></li>
-            <li><a href="https://abuseipdb.com" target="_blank">AbuseIPDB - IP reputation</a></li>
-            <!-- Add 100+ categorized tool links here -->
-        </ul>
-    </section>
+<section id="tools" class="active">
+  <h2>🧰 All Tools (Searchable)</h2>
+  <div id="toolList">
+<h3>IP & URL Reputation</h3><ul>
+<li><a href="https://virustotal.com" target="_blank">VirusTotal</a></li>
+<li><a href="https://urlscan.io" target="_blank">URLScan</a></li>
+<li><a href="https://abuseipdb.com" target="_blank">AbuseIPDB</a></li>
+<li><a href="https://talosintelligence.com" target="_blank">Cisco Talos</a></li>
+<li><a href="https://exchange.xforce.ibmcloud.com" target="_blank">IBM X-Force</a></li>
+<li><a href="https://urlvoid.com" target="_blank">URLVoid</a></li>
+<li><a href="https://ipvoid.com" target="_blank">IPVoid</a></li>
+</ul>
+<h3>File & Sandbox Analysis</h3><ul>
+<li><a href="https://any.run" target="_blank">Any.Run</a></li>
+<li><a href="https://www.hybrid-analysis.com" target="_blank">Hybrid Analysis</a></li>
+<li><a href="https://www.joesandbox.com" target="_blank">Joe Sandbox</a></li>
+<li><a href="https://metadefender.opswat.com" target="_blank">MetaDefender</a></li>
+<li><a href="https://tria.ge" target="_blank">Triage</a></li>
+<li><a href="https://www.vmray.com" target="_blank">VMRay</a></li>
+<li><a href="https://www.filescan.io" target="_blank">FileScan</a></li>
+</ul>
+<h3>Reverse Engineering</h3><ul>
+<li><a href="https://ghidra-sre.org" target="_blank">Ghidra</a></li>
+<li><a href="https://hex-rays.com/ida-free" target="_blank">IDA Free</a></li>
+<li><a href="https://cutter.re" target="_blank">Cutter</a></li>
+<li><a href="https://rada.re" target="_blank">Radare2</a></li>
+<li><a href="https://winitor.com" target="_blank">PEStudio</a></li>
+</ul>
+<h3>Network Monitoring</h3><ul>
+<li><a href="https://www.wireshark.org" target="_blank">Wireshark</a></li>
+<li><a href="https://www.telerik.com/fiddler" target="_blank">Fiddler</a></li>
+<li><a href="https://learn.microsoft.com/sysinternals/downloads/tcpview" target="_blank">TCPView</a></li>
+<li><a href="https://learn.microsoft.com/sysinternals/downloads/procmon" target="_blank">Process Monitor</a></li>
+<li><a href="https://processhacker.sourceforge.io" target="_blank">Process Hacker</a></li>
+</ul>
+<h3>Learning Platforms</h3><ul>
+<li><a href="https://tryhackme.com" target="_blank">TryHackMe</a></li>
+<li><a href="https://www.hackthebox.com" target="_blank">Hack The Box</a></li>
+<li><a href="https://cyberdefenders.org" target="_blank">CyberDefenders</a></li>
+<li><a href="https://blueteamlabs.online" target="_blank">Blue Team Labs Online</a></li>
+<li><a href="https://letsdefend.io" target="_blank">LetsDefend</a></li>
+<li><a href="https://rangeforce.com" target="_blank">RangeForce</a></li>
+</ul>
+  </div>
+</section>
 
-    <section id="ai">
-        <h2>🤖 AI-Powered Tips & Automation Ideas</h2>
-        <div class="tip-box">Use VirusTotal API to automate bulk hash analysis in PowerShell or Python.</div>
-        <div class="tip-box">Train a custom YARA rule to detect known patterns from malware samples.</div>
-        <div class="tip-box">Schedule daily downloads from AbuseIPDB for SIEM enrichment.</div>
-        <div class="tip-box">Use ChatGPT to simulate phishing emails for internal security training (responsibly).</div>
-    </section>
+<section id="ai">
+  <h2>🤖 AI-Powered Tips & Automation Ideas</h2>
+  <div class="tip-box">Use VirusTotal API to automate bulk hash analysis in PowerShell or Python.</div>
+  <div class="tip-box">Train a custom YARA rule to detect known patterns from malware samples.</div>
+  <div class="tip-box">Schedule daily downloads from AbuseIPDB for SIEM enrichment.</div>
+  <div class="tip-box">Use ChatGPT to simulate phishing emails for internal security training (responsibly).</div>
+</section>
 
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-        }
+<script>
+function showTab(tabId) {
+  document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+}
 
-        function filterTools() {
-            let input = document.getElementById('searchBox').value.toLowerCase();
-            let items = document.getElementById('toolList').getElementsByTagName('li');
-            for (let i = 0; i < items.length; i++) {
-                let txt = items[i].textContent || items[i].innerText;
-                items[i].style.display = txt.toLowerCase().includes(input) ? '' : 'none';
-            }
-        }
+function filterTools() {
+  let input = document.getElementById('searchBox').value.toLowerCase();
+  let listItems = document.querySelectorAll('#toolList li');
+  listItems.forEach(item => {
+    item.style.display = item.textContent.toLowerCase().includes(input) ? '' : 'none';
+  });
+}
 
-        function setLang(lang) {
-            alert('Language switching not implemented — placeholder only for ' + lang);
-        }
-    </script>
+function setLang(lang) {
+  alert('Language switching not implemented — placeholder only for ' + lang);
+}
+</script>
 </body>
 </html>
