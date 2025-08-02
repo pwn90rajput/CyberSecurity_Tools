@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Tools by Pawan Rajput</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 0; }
+        header { background-color: #1e293b; padding: 20px; text-align: center; }
+        header h1 { margin: 0; color: #38bdf8; }
+        nav { background-color: #334155; display: flex; flex-wrap: wrap; justify-content: center; }
+        nav button { background: none; border: none; color: #f8fafc; padding: 15px; cursor: pointer; font-size: 16px; }
+        nav button:hover { background-color: #1e40af; }
+        section { display: none; padding: 20px; }
+        section.active { display: block; }
+        a { color: #38bdf8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        h2 { border-bottom: 2px solid #64748b; padding-bottom: 5px; }
+        ul { list-style: none; padding-left: 0; }
+        li::before { content: "\f054"; font-family: "Font Awesome 6 Free"; font-weight: 900; padding-right: 10px; color: #38bdf8; }
+        .search-container { text-align: center; margin: 20px; }
+        input[type='text'] { padding: 10px; width: 60%; font-size: 16px; border-radius: 5px; border: none; }
+        .lang-toggle { position: absolute; top: 10px; right: 20px; }
+        .lang-toggle button { margin-left: 5px; padding: 5px 10px; }
+        .tip-box { background: #1e293b; padding: 10px; margin: 10px 0; border-left: 5px solid #38bdf8; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-shield-alt"></i> Cybersecurity Tools Portal — By Pawan Rajput</h1>
+        <div class="lang-toggle">
+            <button onclick="setLang('en')">EN</button>
+            <button onclick="setLang('hi')">हिंदी</button>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="searchBox" onkeyup="filterTools()" placeholder="🔍 Search tools...">
+    </div>
+
+    <nav>
+        <button onclick="showTab('tools')"><i class="fas fa-toolbox"></i> All Tools</button>
+        <button onclick="showTab('ai')"><i class="fas fa-robot"></i> AI Tips</button>
+    </nav>
+
+    <section id="tools" class="active">
+        <h2>🧰 All Tools (Filtered View)</h2>
+        <ul id="toolList">
+            <li><a href="https://virustotal.com" target="_blank">VirusTotal - File/URL reputation</a></li>
+            <li><a href="https://urlscan.io" target="_blank">URLScan - URL analysis</a></li>
+            <li><a href="https://any.run" target="_blank">Any.Run - Malware sandbox</a></li>
+            <li><a href="https://ghidra-sre.org" target="_blank">Ghidra - Reverse Engineering</a></li>
+            <li><a href="https://tryhackme.com" target="_blank">TryHackMe - Hands-on labs</a></li>
+            <li><a href="https://abuseipdb.com" target="_blank">AbuseIPDB - IP reputation</a></li>
+            <!-- Add 100+ categorized tool links here -->
+        </ul>
+    </section>
+
+    <section id="ai">
+        <h2>🤖 AI-Powered Tips & Automation Ideas</h2>
+        <div class="tip-box">Use VirusTotal API to automate bulk hash analysis in PowerShell or Python.</div>
+        <div class="tip-box">Train a custom YARA rule to detect known patterns from malware samples.</div>
+        <div class="tip-box">Schedule daily downloads from AbuseIPDB for SIEM enrichment.</div>
+        <div class="tip-box">Use ChatGPT to simulate phishing emails for internal security training (responsibly).</div>
+    </section>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        function filterTools() {
+            let input = document.getElementById('searchBox').value.toLowerCase();
+            let items = document.getElementById('toolList').getElementsByTagName('li');
+            for (let i = 0; i < items.length; i++) {
+                let txt = items[i].textContent || items[i].innerText;
+                items[i].style.display = txt.toLowerCase().includes(input) ? '' : 'none';
+            }
+        }
+
+        function setLang(lang) {
+            alert('Language switching not implemented — placeholder only for ' + lang);
+        }
+    </script>
+</body>
+</html>
