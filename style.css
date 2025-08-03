@@ -56,3 +56,10 @@ h2 {
 .grid a:hover {
   background-color: #334155;
 }
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e293b;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
