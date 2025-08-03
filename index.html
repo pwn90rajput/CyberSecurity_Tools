@@ -1,22 +1,75 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cybersecurity Tools - Pawan Rajput</title>
-  <link rel="stylesheet" href="./assets/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Tools — Pawan Rajput</title>
+  <link href="style.css" rel="stylesheet" />
 </head>
-<body style="background-color:#0f172a;color:#e2e8f0;font-family:sans-serif;">
-  <h1 style="text-align:center;color:#38bdf8;">🛡️ Cybersecurity Tools — Pawan Rajput</h1>
-  <div style="max-width:800px;margin:auto;padding:1rem;">
-    <input placeholder="Search..." style="width:100%;padding:10px;border-radius:5px;margin-bottom:1rem;" />
-    <ul>
-      <li><a href="https://virustotal.com" target="_blank">VirusTotal</a></li>
-      <li><a href="https://any.run" target="_blank">Any.Run</a></li>
-      <li><a href="https://ghidra-sre.org" target="_blank">Ghidra</a></li>
-      <li><a href="https://www.wireshark.org" target="_blank">Wireshark</a></li>
-      <li><a href="https://tryhackme.com" target="_blank">TryHackMe</a></li>
-    </ul>
+<body>
+  <header>
+    <h1>🛡️ Cybersecurity Tools — <span>Pawan Rajput</span></h1>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Search tools..." onkeyup="filterTools()" />
   </div>
+
+  <main id="toolContainer">
+    <section>
+      <h2>🔎 IP & URL Reputation</h2>
+      <div class="grid">
+        <a href="https://virustotal.com" target="_blank">VirusTotal</a>
+        <a href="https://urlscan.io" target="_blank">URLScan</a>
+        <a href="https://abuseipdb.com" target="_blank">AbuseIPDB</a>
+        <a href="https://talosintelligence.com" target="_blank">Cisco Talos</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧪 File & Sandbox Analysis</h2>
+      <div class="grid">
+        <a href="https://any.run" target="_blank">Any.Run</a>
+        <a href="https://tria.ge" target="_blank">Triage</a>
+        <a href="https://metadefender.opswat.com" target="_blank">MetaDefender</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🔬 Reverse Engineering</h2>
+      <div class="grid">
+        <a href="https://ghidra-sre.org" target="_blank">Ghidra</a>
+        <a href="https://hex-rays.com/ida-free" target="_blank">IDA Free</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🌐 Network Monitoring</h2>
+      <div class="grid">
+        <a href="https://www.wireshark.org" target="_blank">Wireshark</a>
+        <a href="https://www.telerik.com/fiddler" target="_blank">Fiddler</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎓 Learning Platforms</h2>
+      <div class="grid">
+        <a href="https://tryhackme.com" target="_blank">TryHackMe</a>
+        <a href="https://www.hackthebox.com" target="_blank">Hack The Box</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function filterTools() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const links = document.querySelectorAll("#toolContainer a");
+      links.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        link.style.display = text.includes(input) ? "inline-block" : "none";
+      });
+    }
+  </script>
 </body>
 </html>
