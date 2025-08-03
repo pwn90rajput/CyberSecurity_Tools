@@ -94,7 +94,6 @@
   </header>
   <nav>
     <button onclick="showTab('tools')">🧰 All Tools</button>
-    <button onclick="showTab('news')">📰 Cyber News</button>
   </nav>
   <div class="search-container">
     <input type="text" id="searchBox" onkeyup="filterTools()" placeholder="Search tools...">
@@ -109,29 +108,6 @@
 <h3>Learning Platforms</h3><ul><li><a href="https://tryhackme.com" target="_blank">TryHackMe</a></li><li><a href="https://www.hackthebox.com" target="_blank">Hack The Box</a></li><li><a href="https://cyberdefenders.org" target="_blank">CyberDefenders</a></li><li><a href="https://blueteamlabs.online" target="_blank">Blue Team Labs Online</a></li><li><a href="https://letsdefend.io" target="_blank">LetsDefend</a></li><li><a href="https://rangeforce.com" target="_blank">RangeForce</a></li><li><a href="https://pentesterlab.com" target="_blank">PentesterLab</a></li><li><a href="https://www.root-me.org" target="_blank">Root Me</a></li><li><a href="https://www.hackthissite.org" target="_blank">Hack This Site</a></li><li><a href="https://portswigger.net/web-security" target="_blank">PortSwigger Academy</a></li><li><a href="https://overthewire.org" target="_blank">OverTheWire</a></li><li><a href="https://www.cyberaces.org" target="_blank">SANS Cyber Aces</a></li><li><a href="https://www.immersivelabs.com" target="_blank">Immersive Labs</a></li><li><a href="https://www.offensive-security.com/labs/individual/" target="_blank">Offensive Security PG</a></li><li><a href="https://boschcybersecurity.com" target="_blank">Bosch Cybersecurity</a></li><li><a href="https://www.netacad.com" target="_blank">Cisco NetAcad</a></li><li><a href="https://grow.google/certificates/cybersecurity/" target="_blank">Google Cybersecurity Cert</a></li><li><a href="https://coursera.org/professional-certificates/ibm-cybersecurity-analyst" target="_blank">IBM Cybersecurity Analyst</a></li><li><a href="https://www.edx.org/learn/cybersecurity" target="_blank">EDX Cybersecurity</a></li><li><a href="https://www.cybrary.it" target="_blank">Cybrary</a></li></ul>
     </div>
   </section>
-  <section id='news' class='active'>
-<h2>📰 Cyber News & Updates (20 Unique Sources)</h2>
-<div class="news-box"><strong>Krebs on Security:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>BleepingComputer:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>The Hacker News:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>SecurityWeek:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>DarkReading:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>CyberScoop:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>CSO Online:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>ThreatPost:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>HackRead:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>TechCrunch Security:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>WIRED Security:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>Naked Security (Sophos):</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>Talos Blog:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>SANS NewsBites:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>MITRE ATT&CK Updates:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>Cisco Security Blog:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>Fortinet Blog:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>Check Point Research:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>Palo Alto Unit 42:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-<div class="news-box"><strong>Microsoft Security Blog:</strong> Latest headlines go here... (connect RSS feed or use web scraping)</div>
-</section>
   <script>
     function showTab(tabId) {
       document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
